@@ -1,10 +1,22 @@
+import { ReactNode } from "react";
+import { Link } from "react-router-dom";
+import "./buttons/buttons.scss"
+
 interface Props {
-  button: JSX.Element;
+  buttonNext?: JSX.Element;
+  buttonBack?: JSX.Element;
+  children?: HTMLAnchorElement | HTMLElement | JSX.Element | React.ReactNode;
 }
 
-const ProcessPageFooter = ({button}: Props) => {
+const ProcessPageFooter = ({buttonNext, buttonBack, children}: Props) => {
   return (
-    <div className="button-card" ></div>
+    <>
+      <div className="foo-container">
+        {buttonBack}
+        <Link to="/card-address/success" >{buttonNext}</Link>
+      </div>
+      {children}
+    </>
   )
 }
 

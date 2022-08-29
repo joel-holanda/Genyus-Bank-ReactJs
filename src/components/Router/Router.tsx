@@ -1,27 +1,32 @@
 import SignIn from "../../features/login/pages/SignIn/SignIn";
 import { SignInRoutes } from "../../features/login/constants/routes";
 import { CardRoutes } from "../../features/card/constants/routes";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CardSolicitar } from "../../features/card/pages/CardSolicitar/CardSolicitar";
 import CardAddress from "../../features/card/pages/CardEntrega/CardAddress";
+import { CardSuccess } from "../../features/card/pages/CardSuccess/CardSuccess";
 
 export const RouterComponent: React.FC = () => {
   return (
     <BrowserRouter>
-      <Switch>
+      <Routes>
         <Route
-          exact path={SignInRoutes.signIn}
-          component={SignIn}
+          path={SignInRoutes.signIn}
+          element={<SignIn />}
         />
         <Route
-          exact path={CardRoutes.card}
-          component={CardSolicitar}
+          path={CardRoutes.card}
+          element={<CardSolicitar />}
         />
         <Route
-          exact path={CardRoutes.cardDeliver}
-          component={CardAddress}
+          path={CardRoutes.cardDeliver}
+          element={<CardAddress />}
         />
-      </Switch>
+        <Route
+          path={CardRoutes.cardDeliverSuccess}
+          element={<CardSuccess />}
+        />
+      </Routes>
     </BrowserRouter>
   )
 }
