@@ -10,7 +10,7 @@ import visible from "../../../../_assets/visible.svg"
 import Button from "../../../../components/Button";
 import ProcessPageFooter from "../../../../components/ProcessPageFooter";
 import { FooterLinks } from "../../components/FooterLinks";
-
+import "./signIn.scss"
 
 
 function SignIn() {
@@ -23,27 +23,36 @@ function SignIn() {
             <ProcessDescriptionHeader component={<Greetings />}/>
           }
           main={
-            <form action="none">
-              <div>
+            <form action="/home">
+              <div className="cpf-container">
                 <label htmlFor="input-cpf">CPF</label>
-                <img src={person} alt="perfil" />
-                <input type="number" name="cpf" id="input-cpf" />
-                <img src={confirmed} alt="ok" />
+                <div>
+                  <img src={person} alt="perfil" />
+                  <input width={15}  placeholder="000.000.000-00" type="number" name="cpf" id="input-cpf" />
+                  <img src={confirmed} alt="ok" />
+                </div>
               </div>
-              <div>
+              <div className="password-container">
                 <label htmlFor="input-password">Senha</label>
-                <img src={lock} alt="senha" />
-                <input type="password" name="password" id="input-password" />
-                <img src={visible} alt="visivel" />
+                <div>
+                  <img src={lock} alt="senha" />
+                  <input placeholder="Sua senha" type="password" name="password" id="input-password" />
+                  <img src={visible} alt="visivel" />
+                </div>
               </div>
               
-              <div>
+              <div className="lembre-de-mim">
                 <p>Lembre de mim</p>
-                <a href="#">toggle</a>
+                <ul className="tg-list">
+                  <li className="tg-list-item">
+                    <input type="checkbox" defaultChecked id="cb4" className="tgl tgl-flat" />
+                    <label htmlFor="cb4" className="tgl-btn"></label>
+                  </li>
+                </ul>
               </div>
 
               <div>
-                <Button text="Entrar" widthButton={256}/>
+                <Button text="Entrar" widthButton={288}/>
               </div>
             </form>
           }

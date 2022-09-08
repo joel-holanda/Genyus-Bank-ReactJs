@@ -15,6 +15,10 @@ export const RouterComponent: React.FC = () => {
           element={<SignIn />}
         />
         <Route
+          path={SignInRoutes.homePage}
+          element={<SignIn />}
+        />
+        <Route
           path={CardRoutes.card}
           element={<CardSolicitar />}
         />

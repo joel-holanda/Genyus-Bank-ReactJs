@@ -11,7 +11,7 @@ export const ProcessDescriptionHeader = ({title, subtitle, description, componen
   return (
     <div>
       {component}
-      <h3>{subtitle}</h3>
+      {subtitle ? <h3>{subtitle}</h3> : ''}
     </div>
   );
 };

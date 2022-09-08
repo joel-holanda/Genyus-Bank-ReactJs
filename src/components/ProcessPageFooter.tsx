@@ -11,10 +11,10 @@ interface Props {
 const ProcessPageFooter = ({buttonNext, buttonBack, children}: Props) => {
   return (
     <>
-      <div className="foo-container">
+      {children ? '' : <div className="foo-container">
         {buttonBack}
         <Link to="/card-address/success" >{buttonNext}</Link>
-      </div>
+      </div>}
       {children}
     </>
   )
