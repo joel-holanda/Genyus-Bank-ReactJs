@@ -6,10 +6,10 @@ export const HomePage = () => {
     <div>
       <PageContainer>
           <ProcessPageLayout 
-            appBar={}
-            header={}
-            main={}
-            footer={}
+            appBar={''}
+            header={''}
+            main={''}
+            footer={''}
           />
       </PageContainer>
     </div>
