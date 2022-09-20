@@ -2,7 +2,7 @@ import { AppBar } from "../../../../components/appBar/AppBar";
 import { ProcessDescriptionHeader } from "../../../../components/header/ProccessDescriptionHeader";
 import PageContainer from "../../../../components/PageContainer";
 import ProcessPageLayout from "../../../../components/ProcessPageLayout";
-import { Greetings } from "../../components/Greetings";
+import { Greetings } from "../../components/greetings/Greetings";
 import person from "../../../../_assets/person.svg"
 import lock from "../../../../_assets/lock.svg"
 import confirmed from "../../../../_assets/confirmed.svg"
@@ -28,7 +28,14 @@ function SignIn() {
                 <label htmlFor="input-cpf">CPF</label>
                 <div>
                   <img src={person} alt="perfil" />
-                  <input width={15}  placeholder="000.000.000-00" type="number" name="cpf" id="input-cpf" />
+                  <input 
+                    width={15}  
+                    placeholder="000.000.000-00" 
+                    type="number" 
+                    name="cpf" 
+                    id="input-cpf" 
+                    required
+                    />
                   <img src={confirmed} alt="ok" />
                 </div>
               </div>
@@ -36,7 +43,13 @@ function SignIn() {
                 <label htmlFor="input-password">Senha</label>
                 <div>
                   <img src={lock} alt="senha" />
-                  <input placeholder="Sua senha" type="password" name="password" id="input-password" />
+                  <input 
+                    placeholder="Sua senha" 
+                    type="password" 
+                    name="password" 
+                    id="input-password"
+                    required
+                  />
                   <img src={visible} alt="visivel" />
                 </div>
               </div>

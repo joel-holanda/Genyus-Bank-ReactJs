@@ -9,7 +9,7 @@ function Button({ text, widthButton }: Props) {
   } 
   
   return (
-    <button id="button" style={style}>{text}</button>
+    <button type="submit" id="button" style={style}>{text}</button>
   )
 };
 
