@@ -1,3 +1,4 @@
 export enum RecoverPasswordRoutes {
-  clientCPF = "/login/change-password"
+  requestPassword = "/change-password",
+  clientCPF = "/change-password/CPF"
 };
