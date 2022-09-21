@@ -7,7 +7,7 @@ import person from "../../../../_assets/person.svg"
 import lock from "../../../../_assets/lock.svg"
 import confirmed from "../../../../_assets/confirmed.svg"
 import visible from "../../../../_assets/visible.svg"
-import Button from "../../../../components/Button";
+import Button from "../../../../components/buttons/Button";
 import ProcessPageFooter from "../../../../components/ProcessPageFooter";
 import { FooterLinks } from "../../components/FooterLinks";
 import "./signIn.scss"

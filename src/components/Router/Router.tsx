@@ -9,6 +9,10 @@ import { HomePage } from "../../features/login/pages/Home/HomePage";
 import { RecoverPasswordRoutes } from "../../features/recoverPassword/constants/routes";
 import { ClientCPF } from "../../features/recoverPassword/pages/informCPF/ClientCPF";
 import { RequestPassword } from "../../features/recoverPassword/pages/requestPassword/RequestPassword";
+import { EmailSuccess } from "../../features/recoverPassword/pages/requestSuccess/EmailSuccess";
+import { SMSSuccess } from "../../features/recoverPassword/pages/requestSuccess/SMSSuccess";
+import { SignUpRoutes } from "../../features/signUp/constants/routes";
+import { CreateAccount } from "../../features/signUp/pages/createAccount/CreateAccount";
 
 export const RouterComponent: React.FC = () => {
   return (
@@ -52,6 +56,19 @@ export const RouterComponent: React.FC = () => {
           path={RecoverPasswordRoutes.requestPassword}
           element={<RequestPassword />}
         /> 
+        <Route
+          path={RecoverPasswordRoutes.requestSuccessSMS}
+          element={<SMSSuccess />}
+          />
+        <Route
+          path={RecoverPasswordRoutes.requestSuccessEmail}
+          element={<EmailSuccess />}
+        />
+
+        <Route
+          path={SignUpRoutes.createAccount}
+          element={<CreateAccount />}
+        />
       </Routes>
     </BrowserRouter>
   )

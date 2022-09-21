@@ -5,7 +5,7 @@ export const FooterLinks = () => {
   return (
     <div className="footer-links">
       <Link to="/change-password/CPF">Esqueci minha senha</Link>
-      <Link to="/">Criar conta</Link>
+      <Link to="/create">Criar conta</Link>
       <Link to="/">Ajuda</Link>
     </div>
   )
